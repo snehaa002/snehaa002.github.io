@@ -5,14 +5,17 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 p {
@@ -58,8 +61,19 @@ a:hover {
   text-decoration-color: rgb(181, 181, 181);
 }
 
+.active-link {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+  text-decoration-color: black;
+}
+
 .logo {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+  color: #111111;
 }
 
 .logo:hover {
@@ -189,6 +203,11 @@ section {
   text-align: center;
 }
 
+.hello-intro {
+  display: inline-block;
+  animation: hello-fade-up 900ms ease both;
+}
+
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
@@ -197,6 +216,70 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+}
+
+/* Interactive name */
+.name-interactive span {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(.34,1.56,.64,1), color 0.25s ease,
+    text-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.name-interactive span:hover {
+  transform: translateY(-9px) scale(1.18) rotate(-4deg);
+  color: #6c63ff;
+  text-shadow: 0 6px 18px rgba(108, 99, 255, 0.35);
+}
+
+.name-interactive:hover span {
+  animation: wave-name 0.65s cubic-bezier(.34,1.56,.64,1) forwards;
+}
+
+.name-interactive:hover span:nth-child(1)  { animation-delay: 0.00s; }
+.name-interactive:hover span:nth-child(2)  { animation-delay: 0.05s; }
+.name-interactive:hover span:nth-child(3)  { animation-delay: 0.10s; }
+.name-interactive:hover span:nth-child(4)  { animation-delay: 0.15s; }
+.name-interactive:hover span:nth-child(5)  { animation-delay: 0.20s; }
+.name-interactive:hover span:nth-child(6)  { animation-delay: 0.25s; }
+.name-interactive:hover span:nth-child(7)  { animation-delay: 0.30s; }
+.name-interactive:hover span:nth-child(8)  { animation-delay: 0.35s; }
+.name-interactive:hover span:nth-child(9)  { animation-delay: 0.40s; }
+.name-interactive:hover span:nth-child(10) { animation-delay: 0.45s; }
+.name-interactive:hover span:nth-child(11) { animation-delay: 0.50s; }
+.name-interactive:hover span:nth-child(12) { animation-delay: 0.55s; }
+.name-interactive:hover span:nth-child(13) { animation-delay: 0.60s; }
+.name-interactive:hover span:nth-child(14) { animation-delay: 0.65s; }
+.name-interactive:hover span:nth-child(15) { animation-delay: 0.70s; }
+
+@keyframes wave-name {
+  0% {
+    transform: translateY(0) scale(1);
+    color: #111111;
+  }
+  35% {
+    transform: translateY(-11px) scale(1.14) rotate(-4deg);
+    color: #6c63ff;
+    text-shadow: 0 8px 20px rgba(108, 99, 255, 0.28);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    color: #111111;
+    text-shadow: none;
+  }
+}
+
+@keyframes hello-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(16px);
+    letter-spacing: 0.08rem;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 0;
+  }
 }
 
 #socials-container {
@@ -273,6 +356,7 @@ section {
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .about-details-container {
@@ -347,8 +431,9 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
 }
 
 article .icon {
@@ -364,17 +449,37 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 280px;
+  flex: 1 1 calc(50% - 2rem);
+  max-width: calc(50% - 1rem);
+}
+
+.project-img-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 .project-title {
   margin: 1rem;
   color: black;
+}
+
+.color-container .btn-container {
+  margin-top: auto;
+  padding-bottom: 0.5rem;
 }
 
 .project-btn {
@@ -385,6 +490,16 @@ article .icon {
 .project-btn-1 {
   color: white;
   border-color: rgb(163, 163, 163);
+}
+
+/* Project card hover lift */
+.color-container {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* CONTACT */

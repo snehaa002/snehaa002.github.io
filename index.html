@@ -7,6 +7,7 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -38,13 +39,15 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Sneha Srivastava profile picture" />
+        <img src="./about-pic.jpeg" alt="Sneha Srivastava profile picture" />
       </div>
       <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Sneha Srivastava</h1>
-        <p class="section__text__p2">Frontend Web Developer</p>
-        <div class="btn-container">
+        <p class="section__text__p1 hello-intro">Hello, I'm</p>
+        <h1 class="title name-interactive">
+          <span>S</span><span>n</span><span>e</span><span>h</span><span>a</span>&nbsp;<span>S</span><span>r</span><span>i</span><span>v</span><span>a</span><span>s</span><span>t</span><span>a</span><span>v</span><span>a</span>
+        </h1>
+        <p class="section__text__p2"><span id="typed-text"></span></p>
+       <div class="btn-container">
           <button
             class="btn btn-color-2"
             onclick="window.open('./assets/Sneha_Resume.pdf')"
@@ -74,14 +77,7 @@
     <section id="about">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
+      <div class="section-container" data-aos="fade-up">
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -91,7 +87,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>1+ years <br />Frontend Web Development</p>
+              <p>1+ years <br />Full Stack Web Development</p>
             </div>
             <div class="details-container">
               <img
@@ -123,115 +119,72 @@
     </section>
     <section id="experience">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
+        <h1 class="title">Skills</h1>
+      <div class="experience-details-container" data-aos="fade-up">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Web Development</h2>
+              <h2 class="experience-sub-title">Frontend Development</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>HTML5</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>CSS3</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>JavaScript</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Bootstrap</h3>
-                  <p>Basic</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>React.js</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Redux Toolkit</h3></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Responsive UI</h3></div>
               </article>
             </div>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Programming languages</h2>
+              <h2 class="experience-sub-title">Backend, Database & Tools</h2>
             <div class="article-container">
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Node.js</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>C++</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Express.js</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>MongoDB</h3></div>
               </article>
               <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Intermediate</p>
-                </div>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>MySQL</h3></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>REST APIs</h3></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Git & GitHub</h3></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Supabase</h3></div>
+              </article>
+              <article>
+                <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+                <div><h3>Firebase</h3></div>
               </article>
             </div>
           </div>
@@ -246,102 +199,102 @@
     </section>
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
+      <h1 class="title">Full Stack Projects</h1>
+      <div class="experience-details-container" data-aos="fade-up">
         <div class="about-containers">
           <div class="details-container color-container">
-            <div class="article-container">
+            <div class="project-img-container">
               <img
                 src="./assets/project-1.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Amazon clone</h2>
+            <h2 class="experience-sub-title project-title">Digital Time Capsule</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/snehaa002/Amazon-clone/tree/master'"
+                onclick="location.href='https://github.com/snehaa002/digital-time-capsule-frontend'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-1 project-btn-1"
-                onclick="location.href='https://snehaa002.github.io/Amazon-clone/'"
+                onclick="location.href='https://digital-time-capsule-frontend.vercel.app'"
               >
-               Learn More 
+                Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
+            <div class="project-img-container">
               <img
                 src="./assets/project-2.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Fetch API-Currency Convertor</h2>
+            <h2 class="experience-sub-title project-title">AI Career Coach</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/snehaa002/Fetch-API-Currency-Convertor/tree/master'"
+                onclick="location.href='https://github.com/snehaa002/AI-Career-Coach'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-1 project-btn-1"
-                onclick="location.href='https://snehaa002.github.io/Fetch-API-Currency-Convertor/'"
+                onclick="location.href='https://ai-career-coach-one-phi.vercel.app'"
               >
-                Learn More 
+                Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
+            <div class="project-img-container">
               <img
                 src="./assets/project-3.png"
                 alt="Project 3"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Tic-Tac-Toe Game</h2>
+            <h2 class="experience-sub-title project-title">Autonomous Car Simulation</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/snehaa002/Tic-Tac-Toe-Game/tree/master'"
+                onclick="location.href='https://github.com/snehaa002/Autonomous-Car-Simulation-Main'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-1 project-btn-1"
-                onclick="location.href='https://snehaa002.github.io/Tic-Tac-Toe-Game/'"
+                onclick="location.href='https://neural-network-self-driving-car.netlify.app/'"
               >
-                Learn More 
+                Live Demo
               </button>
             </div>
           </div>
           <div class="details-container color-container">
-            <div class="article-container">
+            <div class="project-img-container">
               <img
                 src="./assets/project-4.png"
                 alt="Project 4"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Simple Calculator</h2>
+            <h2 class="experience-sub-title project-title">TimeTrack</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/snehaa002/Simple-Calculator/tree/master'"
+                onclick="location.href='https://github.com/snehaa002/TimeTrack'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-1 project-btn-1"
-                onclick="location.href='https://snehaa002.github.io/Simple-Calculator/'"
+                onclick="location.href='https://mydata-b76c2.web.app/#/'"
               >
-                Learn More 
+                Live Demo
               </button>
             </div>
           </div>
@@ -387,8 +340,10 @@
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2024 Sneha Srivastava. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Sneha Srivastava. All Rights Reserved.</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
